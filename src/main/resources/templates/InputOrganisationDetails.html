@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+
+<h1>Organisations</h1>
+
+<h2>Add organisation</h2>
+
+<form action="#" th:action="@{./saveOrganisation}" th:object="${org}" method="post">
+		Enter organisation ID: <input type="text" th:field="*{orgId}"><br><br>
+		Enter organisation name : <input type="text" th:field="*{orgName}"><br><br>
+		Enter organisation description : <input type="text" th:field="*{orgDesc}"><br><br>
+		
+		Enter organisation address: <input type="text" th:field="*{orgAddress}"><br><br>
+	
+		<input type="submit" value="Save Organisation">
+	</form>
+
+	<hr>
+	<br><br>
+	<a href = "/OrganisationIndex" > Go back to Organisation main page</a><br><br>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Super Hero Management System</h1>
+	<hr>
+	<form action="#" th:action="@{./deleteLocation}" th:object="${loc}">
+		Select Location ID :
+		<select th:field="*{locationId}">
+			<option th:each="id : ${locationIds}" th:value="${id}" th:text="${id}"></option>
+		</select>
+		 <br><br>
+		<input type="submit" value="Delete Location">
+</body>
+</html>

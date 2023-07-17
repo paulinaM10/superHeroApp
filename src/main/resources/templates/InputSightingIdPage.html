@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Input Sighting Id</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Enter the Sighting Id</h1>
+<form action="#" th:action="@{./searchSightingById}" th:object="${sighting}" method="get">
+    Enter Sighting ID : <input type="text" th:field="*{sightingId}"><br>
+    <input type="submit" value="Search">
+</form>
+</body>
+</html>

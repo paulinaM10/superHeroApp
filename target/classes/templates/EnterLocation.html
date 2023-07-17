@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Enter Location</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Enter Location ID</h1>
+<form action="/ShowSightingsByLocation" method="post">
+    <input type="number" name="locationId">
+    <input type="submit" value="Search">
+</form>
+
+<a href="/">Go To Main Page</a>
+</body>
+</html>

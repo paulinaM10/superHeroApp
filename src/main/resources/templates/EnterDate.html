@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Enter Date</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Enter Date</h1>
+<form action="/ShowSightingsByDate" method="post">
+    <input type="date" name="locationDate">
+    <input type="submit" value="Search">
+</form>
+
+<a href="/SightingIndex">Go To Main Sighting Page</a>
+</body>
+</html>

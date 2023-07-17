@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Super Power Details Input</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+<style>
+.error {
+    color: red;
+}
+</style>
+
+</head>
+<body>
+<h1>Super Power</h1>
+	<hr>
+	
+	<hr>
+	<form action="#" th:action="@{./saveSuperPower}" th:object="${sp}" method="post">
+    Enter Super Power ID: <input type="text" th:field="*{superPowerId}"><br>
+    <p th:if="${#fields.hasErrors('superPowerId')}" th:errors="*{superPowerId}" class="error"></p>
+    <br> 
+    Enter Super Power Name: <input type="text" th:field="*{superPowerName}"><br>
+    <p th:if="${#fields.hasErrors('superPowerName')}" th:errors="*{superPowerName}" class="error"></p>
+    <br> 
+    Enter Hero ID: <input type="text" th:field="*{heroId}"><br>
+    <p th:if="${#fields.hasErrors('heroId')}" th:errors="*{heroId}" class="error"></p>
+    <br> 
+    <input type="submit" value="Save Super Power">
+</form>
+
+	
+	<br>
+	<br>
+	<a href="/">GoTo Main Page</a>
+
+</body>
+</html>

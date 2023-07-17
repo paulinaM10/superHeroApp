@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>All Sightings</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>All Sightings</h1>
+<table>
+  <tr>
+    <th>Hero Id</th>
+    <th>Location Id</th>
+    <th>Sighting Date</th>
+  </tr>
+ <tr th:each="sighting : ${sightingList}">
+    <td th:text="${sighting.heroId}"></td>
+    <td th:text="${sighting.locationId}"></td>
+    <td th:text="${sighting.locationDate}"></td>
+</tr>
+
+</table>
+<a href="/">Go To Main Page</a>
+</body>
+</html>

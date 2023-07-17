@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload SuperHero Image</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+    <h1>Upload SuperHero Image</h1>
+    <form action="/uploadHeroImage" method="post" enctype="multipart/form-data">
+        Enter SuperHero ID: <input type="text" name="heroId"><br><br>
+        Upload SuperHero Image: <input type="file" name="file"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    
+    <a href="/">Go To Main Page</a>
+	<br>
+	<br>
+    
+</body>
+</html>

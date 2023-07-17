@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Organisation</h1>
+<hr>
+
+<h2>Edit details of a specific organisation</h2>
+	<form action="./updateOrg">
+		Enter organisation ID : <input type="text" name="orgId"><br><br>
+		Enter organisation name : <input type="text" name="orgName"><br><br>
+		Enter organisation description : <input type="text" name="orgDesc"><br><br>
+		Enter organisation address : <input type="text" name="orgAddress"><br><br>
+		<input type="submit" value="Update Organisation Details">
+	</form>
+
+<br>
+<a href = "/OrganisationIndex" > Go back to Organisation main page</a><br><br>
+	
+
+</body>
+</html>

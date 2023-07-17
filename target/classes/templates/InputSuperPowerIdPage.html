@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Super Power by ID</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<body>
+	<h1>Super Powers</h1>
+	<hr>
+	<hr>
+
+	<form action="#" th:action="@{./searchSuperPowerById}" method="get">
+		Pick Super Power Id:
+		<select th:field="*{superPower.superPowerId}">
+	<option th:each="superPowerId : ${superPowerIds}" th:value="${superPowerId}" th:text="${superPowerId}"></option>
+</select>
+
+		 <br><br>
+		<input type="submit" value="Search SuperPower">
+	</form>
+	
+	<a href="/">GoTo Main Page</a>
+
+</body>
+</html>

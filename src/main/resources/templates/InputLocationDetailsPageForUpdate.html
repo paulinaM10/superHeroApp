@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Super Hero Location Management</h1>
+<h2> Update Location By ID: </h2>
+
+<form action="#" th:action="@{./updateLocation}" th:object="${loc}" method="post">
+	Select Location ID to update:
+	<select th:field="*{locationId}">
+		<option th:each="id : ${locationId}" th:value="${id}" th:text="${id}"></option>
+	</select>
+	<br>
+	<br>
+	<!--<br>
+	Enter new Super Power Name : <input type="text" th:field="*{locationName}">
+	<br>
+	Enter new Hero ID: <input type="text" th:field="*{locationId}">
+	<br>-->
+	Enter New Location ID : <input type="text" th:field="*{locationId}"><br><br>
+		Enter New Location Name : <input type="text" th:field="*{locationName}"><br><br>
+		Enter New Location Description : <input type="text" th:field="*{locationDesc}"><br><br>
+		Enter New Location Address : <input type="text" th:field="*{locationAddress}"><br><br>
+		Enter New Location Coordinates : <input type="text" th:field="*{coordinates}"><br><br>
+	<input type="submit" value="Update Location">
+</form>
+<br>
+<a href="/locations">Go To Main Page</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>SuperHero</h1>
+	<hr>
+	<form action="#" th:action="@{./saveHero}" th:object="${hero}" method="post">
+		Enter SuperHero ID : <input type="text" th:field="*{heroId}"><br><br>
+		Enter SuperHero Name : <input type="text" th:field="*{heroName}"><br><br>
+			<p th:if="${#fields.hasErrors('heroName')}" th:errors="*{heroName}" th:errorClass="error">Hero Error</p>
+		<br><br>
+		
+		Enter SuperHero Description : <input type="text" th:field="*{heroDesc}"><br><br>
+		<p th:if="${#fields.hasErrors('heroDesc')}" th:errors="*{heroDesc}" th:errorClass="error">Mpaa Rating Error</p>
+		
+		<br><br>
+		
+		Enter SuperHero SuperPower : <input type="text" th:field="*{heroSuperPower}"><br><br>
+		<p th:if="${#fields.hasErrors('heroSuperPower')}" th:errors="*{heroSuperPower}" th:errorClass="error">Mpaa Rating Error</p>
+		
+		<br><br>
+	
+		<input type="submit" value="Save Hero"> <br><br>
+	</form>
+
+<a href = "/HeroIndex" > Go back to Hero Main Page</a>
+
+</body>
+</html>

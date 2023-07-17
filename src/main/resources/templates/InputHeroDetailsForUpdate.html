@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Hero Details</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+<body>
+    <h1>Update Hero Details</h1>
+    <hr>
+    <form action="/updateHero" method="post">
+    
+        <label for="heroId">Select Hero ID:</label>
+        <select id="heroId" name="heroId">
+            <option th:each="hero : ${heroes}" th:value="${hero.heroId}" th:text="${hero.heroId}"></option>
+        </select>
+        <br><br>
+        <label for="heroName">New Hero Name:</label>
+        <input type="text" id="heroName" name="heroName">
+        <br><br>
+        <label for="heroDesc">New Hero Description:</label>
+        <input type="text" id="heroDesc" name="heroDesc">
+        <br><br>
+        <label for="heroSuperPower">New Hero Superpower:</label>
+        <input type="text" id="heroSuperPower" name="heroSuperPower">
+        <br><br>
+        <input type="submit" value="Update Hero">
+    </form>
+    
+   <a href = "/HeroIndex" > Go back to SuperHero Main Page</a><br><br>
+	<a href="/">Go To Main Page</a>
+</body>
+</html>
+

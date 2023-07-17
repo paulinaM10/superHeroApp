@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add New Sighting</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Add New Sighting</h1>
+<form action="#" th:action="@{./saveSighting}" th:object="${sighting}" method="post">
+    Hero ID: <input type="text" th:field="*{heroId}"><br>
+    Location ID: <input type="text" th:field="*{locationId}"><br>
+    Date (YYYY-MM-DD): <input type="text" th:field="*{locationDate}"><br>
+    <input type="submit" value="Save Sighting">
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+    <h1>Welcome to the Hero Education and Relationship Organization (HERO) Application</h1>
+    <p>This application allows you to manage Superheroes, Supervillains, their Superpowers, Locations, Organizations and Sightings.</p>
+
+    <h2>Navigation</h2>
+    <nav>
+        <a href="./HeroIndex">Manage Superheroes / Supervillains</a>
+        <a href="./SuperPowerIndex">Manage Super Powers</a>
+        <a href="./location-index">Manage Locations</a>
+        <a href="./OrganisationIndex">Manage Organizations</a>
+         <a href="./HeroOrganisationIndex">Manage HeroOrganizations</a>
+        <a href="./SightingIndex">Manage Sightings</a>
+    </nav>
+
+    <h2>Latest Sightings</h2>
+    <table>
+ <tr>
+        <th>Superhero / Supervillain</th>
+        <th>Location</th>
+        <th>Time</th>
+    </tr>
+    <tr th:each="sighting : ${latestSightings}">
+        <td th:text="${sighting.heroId}">Hero</td>
+        <td th:text="${sighting.locationId}">Location</td>
+        <td th:text="${sighting.locationDate}">Date</td>
+    </tr>
+</table>
+
+<h2>Challenge 1</h2>
+<p>Upload a picture of a Superhero here:</p>
+<a href="/UploadHeroImagePage">Upload SuperHero Image</a><br><br>
+
+<h2>Challenge 2</h2>
+<p>Google Maps of Universal Studios Hollywood</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.3214722970033!2d-118.35798635657525!3d34.13811671392859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2be4f253238cf%3A0xd3dd5027799c9a71!2sUniversal%20Studios%20Hollywood!5e0!3m2!1sen!2suk!4v1689343031617!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    
+</body>
+</html>

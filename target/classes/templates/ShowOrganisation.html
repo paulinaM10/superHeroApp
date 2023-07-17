@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+
+<h1>Organisation</h1>
+	<hr>
+	<table border="1">
+		<tr>
+			<th>Organisation ID</th>
+			<th>Organisation name</th>
+			<th>Organisation description</th>
+			<th>Organisation address</th>
+			
+		</tr>
+		<tr>
+			<td th:text="${organisation.orgId}"></td>
+			<td th:text="${organisation.orgName}"></td>
+			<td th:text="${organisation.orgDesc}"></td>
+			<td th:text="${organisation.orgAddress}"></td>
+		
+		<tr>
+	</table>
+	<br><br>
+	
+	<a href="./InputOrgIdPage">Search for another organisation ID</a>
+	<a href = "/OrganisationIndex" > Go back to Organisation main page</a><br><br>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sighting Details</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Sighting Details</h1>
+<table>
+  <tr>
+    <th>Hero Id</th>
+    <th>Location Id</th>
+    <th>Sighting Date</th>
+  </tr>
+  <tr>
+    <td th:text="${sighting.heroId}"></td>
+    <td th:text="${sighting.locationId}"></td>
+    <td th:text="${sighting.locationDate}"></td>
+  </tr>
+</table>
+
+
+<img th:src="@{${hero.imagePath}}" alt="Hero Image">
+
+<a href="/">Go To Main Page</a>
+</body>
+</html>

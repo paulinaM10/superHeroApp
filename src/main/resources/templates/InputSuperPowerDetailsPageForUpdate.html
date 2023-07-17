@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Update Super Power</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Update Super Power</h1>
+<form action="#" th:action="@{./updateSuperPower}" th:object="${sp}" method="post">
+	Select Super Power ID to update:
+	<select th:field="*{superPowerId}">
+		<option th:each="id : ${superPowerIds}" th:value="${id}" th:text="${id}"></option>
+	</select>
+	<br>
+	Enter new Super Power Name : <input type="text" th:field="*{superPowerName}">
+	<br>
+	Enter new Hero ID: <input type="text" th:field="*{heroId}">
+	<br>
+	<input type="submit" value="Update Super Power">
+</form>
+<br>
+<a href="/">GoTo Main Page</a>
+</body>
+</html>

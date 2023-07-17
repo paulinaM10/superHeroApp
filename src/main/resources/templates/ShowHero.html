@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>SuperHero</h1>
+<hr>
+<table border="1">
+<tr>
+<th> Hero ID </th>
+<th> Hero Name </th>
+<th> Hero Description </th>
+<th> Hero SuperPower </th>
+</tr>
+<tr>
+<td th:text="${hero.heroId}"></td>
+<td th:text="${hero.heroName}"></td>
+<td th:text="${hero.heroDesc}"></td>
+<td th:text="${hero.heroSuperPower}"></td>
+</tr>
+
+</table>
+<br><br>
+
+<a href = "/HeroIndex" > Go back to SuperHero Main Page</a><br><br>
+	<a href="/">Go To Main Page</a>
+
+
+</body>
+</html>

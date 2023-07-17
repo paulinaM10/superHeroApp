@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Delete Super Power</title>
+<link rel="stylesheet" type="text/css" th:href="@{/main.css}">
+</head>
+<body>
+<h1>Delete Super Power</h1>
+<form action="#" th:action="@{./deleteSuperPower}" th:object="${sp}" method="post">
+	Select Super Power ID to delete:
+	<select th:field="*{superPowerId}">
+		<option th:each="id : ${superPowerIds}" th:value="${id}" th:text="${id}"></option>
+	</select>
+	<br>
+	<input type="submit" value="Delete Super Power">
+</form>
+<br>
+<a href="/">GoTo Main Page</a>
+</body>
+</html>
